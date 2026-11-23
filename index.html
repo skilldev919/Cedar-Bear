@@ -105,7 +105,7 @@
               <span class="badge">20% OFF</span>
             </div>
             <div class="now">Now: <strong>$27.96</strong></div>
-            <button class="btn btn-dark view-product" data-product="energy">View Product <span class="arrow">›</span></button>
+            <a class="btn btn-dark view-product" href="collection.html#energy">View Product <span class="arrow">›</span></a>
           </div>
         </article>
 
@@ -113,7 +113,7 @@
         <article id="product-adrenal" class="product-card tint-lavender" data-product="adrenal">
           <div class="product-media">
             <div class="bottle">
-              <img src="4.png" alt="Adrenal Balance herbal formula bottle" width="106" height="195">
+              <img src="images/bottle-adrenal-hd.png" alt="Adrenal Balance herbal formula bottle" width="303" height="624">
             </div>
           </div>
           <div class="product-info">
@@ -124,7 +124,7 @@
               <span class="badge">20% OFF</span>
             </div>
             <div class="now">Now: <strong>$26.36</strong></div>
-            <button class="btn btn-dark view-product" data-product="adrenal">View Product <span class="arrow">›</span></button>
+            <a class="btn btn-dark view-product" href="collection.html#adrenal">View Product <span class="arrow">›</span></a>
           </div>
         </article>
 
@@ -143,7 +143,7 @@
               <span class="badge">20% OFF</span>
             </div>
             <div class="now">Now: <strong>$27.96</strong></div>
-            <button class="btn btn-dark view-product" data-product="joint">View Product <span class="arrow">›</span></button>
+            <a class="btn btn-dark view-product" href="collection.html#joint">View Product <span class="arrow">›</span></a>
           </div>
         </article>
       </div>
@@ -196,35 +196,7 @@
   </div>
 </footer>
 
-<!-- ============ PRODUCT MODAL ============ -->
-<div class="modal" id="product-modal" hidden>
-  <div class="modal-backdrop" data-close></div>
-  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <button class="modal-close" data-close aria-label="Close">×</button>
-    <div class="modal-media" id="modal-media"></div>
-    <div class="modal-body">
-      <span class="modal-tag" id="modal-tag"></span>
-      <h3 id="modal-title"></h3>
-      <p id="modal-desc"></p>
-      <ul class="modal-points" id="modal-points"></ul>
-      <div class="price-row">
-        <span class="retail">Retail: <s id="modal-retail"></s></span>
-        <span class="badge">20% OFF</span>
-      </div>
-      <div class="now">Now: <strong id="modal-price"></strong></div>
-      <div class="qty-row">
-        <div class="qty">
-          <button type="button" id="qty-minus" aria-label="Decrease quantity">−</button>
-          <input type="number" id="qty" value="1" min="1" max="10" aria-label="Quantity">
-          <button type="button" id="qty-plus" aria-label="Increase quantity">+</button>
-        </div>
-        <button class="btn btn-yellow" id="add-to-cart">Add to Cart</button>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="script.js"></script>
 </body>

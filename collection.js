@@ -266,6 +266,25 @@
   document.documentElement.style.scrollPaddingTop = "96px";
   renderSelection();
   renderCart();
-  var initial = location.hash.replace("#", "");
-  if (PRODUCTS[initial]) openDetails(initial, false);
+  function openFromHash(e) {
+    var key = location.hash.replace("#", "");
+    if (!PRODUCTS[key]) return;
+    openDetails(key, false);
+    var card = document.getElementById(key);
+    var panel = document.getElementById("details-" + key);
+    // Wait for layout (fonts/images) so the scroll lands on the opened product.
+    setTimeout(function () {
+      card.scrollIntoView({ behavior: (e && e.type === "hashchange") ? "smooth" : "auto", block: "start" });
+      if (panel.animate) {
+        panel.animate(
+          [{ boxShadow: "0 0 0 0 rgba(247,194,27,0)" }, { boxShadow: "0 0 0 5px rgba(247,194,27,.85)" }, { boxShadow: "0 0 0 0 rgba(247,194,27,0)" }],
+          { duration: 1500, delay: 500, easing: "ease-out" }
+        );
+      }
+    }, 120);
+  }
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  window.addEventListener("hashchange", openFromHash);
+  if (document.readyState === "complete") openFromHash();
+  else window.addEventListener("load", openFromHash);
 })();

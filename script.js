@@ -1,29 +1,6 @@
 (function () {
   "use strict";
 
-  var PRODUCTS = {
-    energy: {
-      tag: "Endocrine · Herbal Formula",
-      title: "Energy & Stamina",
-      desc: "Support for your active-day routine. A botanical blend made to help you keep moving from morning trail to evening walk.",
-      points: ["Alcohol-free liquid extract", "2 fl oz (60 mL) dropper bottle", "Made in small batches"],
-      retail: "$34.95", price: "$27.96", tint: "tint-green"
-    },
-    adrenal: {
-      tag: "Herbal Formula",
-      title: "Adrenal Balance",
-      desc: "Support for everyday balance and resilience, so busy days feel a little more even.",
-      points: ["Alcohol-free liquid extract", "2 fl oz (60 mL) dropper bottle", "Made in small batches"],
-      retail: "$32.95", price: "$26.36", tint: "tint-lavender"
-    },
-    joint: {
-      tag: "Structural · Herbal Formula",
-      title: "Joint & Muscle",
-      desc: "Support for movement and an active lifestyle, featuring warming botanicals like turmeric.",
-      points: ["Alcohol-free liquid extract", "2 fl oz (60 mL) dropper bottle", "Made in small batches"],
-      retail: "$34.95", price: "$27.96", tint: "tint-peach"
-    }
-  };
 
   var $ = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
@@ -108,75 +85,9 @@
     );
   }
 
-  /* ---------- Product modal ---------- */
-  var modal = $("#product-modal");
-  var qty = $("#qty");
-  var current = null;
-  var lastFocus = null;
-
-  function openModal(key) {
-    var p = PRODUCTS[key];
-    if (!p) return;
-    current = key;
-    lastFocus = document.activeElement;
-    $("#modal-tag").textContent = p.tag;
-    $("#modal-title").textContent = p.title;
-    $("#modal-desc").textContent = p.desc;
-    $("#modal-retail").textContent = p.retail;
-    $("#modal-price").textContent = p.price;
-    $("#modal-points").innerHTML = p.points.map(function (t) { return "<li>" + t + "</li>"; }).join("");
-    var media = $("#modal-media");
-    media.className = "modal-media " + p.tint;
-    media.innerHTML = "";
-    var bottle = $("#product-" + key + " .bottle").cloneNode(true);
-    media.appendChild(bottle);
-    qty.value = 1;
-    modal.hidden = false;
-    document.body.style.overflow = "hidden";
-    $(".modal-close", modal).focus();
-  }
-  function closeModal() {
-    modal.hidden = true;
-    document.body.style.overflow = "";
-    if (lastFocus) lastFocus.focus();
-  }
-
-  $$(".view-product").forEach(function (b) {
-    b.addEventListener("click", function () { openModal(b.getAttribute("data-product")); });
-  });
-  $$("[data-close]", modal).forEach(function (el) { el.addEventListener("click", closeModal); });
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") {
-      if (!modal.hidden) closeModal();
-      closeDropdowns();
-    }
-    if (e.key === "Tab" && !modal.hidden) {
-      var f = $$("button, input", modal).filter(function (el) { return el.offsetParent !== null; });
-      var first = f[0], last = f[f.length - 1];
-      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-    }
+    if (e.key === "Escape") closeDropdowns();
   });
-
-  function clampQty(v) { v = parseInt(v, 10); return isNaN(v) ? 1 : Math.min(10, Math.max(1, v)); }
-  $("#qty-minus").addEventListener("click", function () { qty.value = clampQty(qty.value - 1); });
-  $("#qty-plus").addEventListener("click", function () { qty.value = clampQty(+qty.value + 1); });
-  qty.addEventListener("change", function () { qty.value = clampQty(qty.value); });
-
-  $("#add-to-cart").addEventListener("click", function () {
-    var n = clampQty(qty.value);
-    closeModal();
-    toast(n + " × " + PRODUCTS[current].title + " added to cart");
-  });
-
-  /* ---------- Toast ---------- */
-  var toastEl = $("#toast"), toastTimer;
-  function toast(msg) {
-    toastEl.textContent = msg;
-    toastEl.classList.add("show");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () { toastEl.classList.remove("show"); }, 2600);
-  }
 
   /* Offset anchor scroll for sticky header */
   document.documentElement.style.scrollPaddingTop = "80px";
