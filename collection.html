@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stay in Motion Collection – Cedar Bear Naturales</title>
+<meta name="description" content="Choose your Stay in Motion formulas and how many bottles you want. Buy any 3 bottles and save an extra 5% plus free shipping.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="collection.css">
+</head>
+<body class="shop-page">
+
+<!-- ============ HEADER ============ -->
+<header class="site-header shop-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo logo-stack" aria-label="Cedar Bear Naturales home">
+      <svg class="logo-leaf" viewBox="0 0 40 28" aria-hidden="true">
+        <path d="M3 25 C 8 8, 22 2, 37 3 C 36 16, 26 25, 10 23 Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M3 25 C 12 18, 20 13, 30 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+      <span>Cedar Bear<br>Naturales<sup>®</sup></span>
+    </a>
+
+    <nav id="main-nav" class="main-nav" aria-label="Main">
+      <ul>
+        <li class="has-dropdown">
+          <button class="nav-link" aria-expanded="false">Shop <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <ul class="dropdown">
+            <li><a href="#collection-top">All Products</a></li>
+            <li><a href="#energy" data-open="energy">Energy &amp; Stamina</a></li>
+            <li><a href="#adrenal" data-open="adrenal">Adrenal Balance</a></li>
+            <li><a href="#joint" data-open="joint">Joint &amp; Muscle</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <button class="nav-link" aria-expanded="false">Collections <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <ul class="dropdown">
+            <li><a href="#collection-top">Stay in Motion</a></li>
+            <li><a href="index.html#products">Active-Day Favorites</a></li>
+            <li><a href="#bundle">Bundle &amp; Save</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <button class="nav-link" aria-expanded="false">Learn <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <ul class="dropdown">
+            <li><a href="#energy" data-open="energy">Ingredients &amp; Suggested Use</a></li>
+            <li><a href="#bundle">How the 3-Bottle Bundle Works</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <button class="nav-link" aria-expanded="false">About <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <ul class="dropdown">
+            <li><a href="index.html#about">Our Story</a></li>
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <span class="header-divider" aria-hidden="true"></span>
+      <button class="icon-btn search-toggle" id="search-toggle" aria-label="Search products" aria-expanded="false" aria-controls="search-bar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.8 15.8L21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+      </button>
+      <button class="icon-btn cart-toggle" id="cart-toggle" aria-label="Cart, 0 items" aria-expanded="false" aria-controls="mini-cart">
+        <svg viewBox="0 0 28 24" aria-hidden="true"><path d="M1.5 2h4l3 13.5h14l3-9.5H7.2" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="10.5" cy="20.5" r="1.9" fill="currentColor"/><circle cx="20.5" cy="20.5" r="1.9" fill="currentColor"/></svg>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Search bar -->
+  <div class="search-bar" id="search-bar" hidden>
+    <div class="container search-inner">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.8 15.8L21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+      <input type="search" id="search-input" placeholder="Search formulas or ingredients (e.g. turmeric, ginkgo)…" aria-label="Search formulas or ingredients">
+      <button class="search-close" id="search-close" aria-label="Close search">×</button>
+    </div>
+  </div>
+
+  <!-- Mini cart -->
+  <div class="mini-cart" id="mini-cart" hidden>
+    <div class="mc-head">
+      <strong>Your Cart</strong>
+      <button class="mc-close" id="mc-close" aria-label="Close cart">×</button>
+    </div>
+    <ul class="mc-list" id="mc-list"></ul>
+    <p class="mc-empty" id="mc-empty">Your cart is empty.</p>
+    <div class="mc-totals" id="mc-totals"></div>
+    <button class="btn btn-yellow mc-checkout" id="mc-checkout">Checkout <span class="arrow">›</span></button>
+  </div>
+</header>
+
+<main id="collection-top">
+  <!-- ============ INTRO ============ -->
+  <section class="shop-intro container">
+    <h1>Stay in Motion Collection</h1>
+    <p>Choose your formulas and how many bottles you want.</p>
+  </section>
+
+  <!-- ============ PRODUCTS ============ -->
+  <div class="shop-grid container" id="shop-grid">
+
+    <!-- Energy & Stamina -->
+    <article class="shop-card tint-energy" id="energy" data-product="energy" data-col="1">
+      <div class="sc-media"><img src="images/bottle-energy.png" alt="Energy &amp; Stamina herbal formula, 2 fl oz bottle" width="98" height="246"></div>
+      <div class="sc-body">
+        <h2 class="sc-title">Energy &amp; Stamina</h2>
+        <p class="sc-short">Support for your active-day routine.*</p>
+        <p class="sc-long">Alcohol-free herbal liquid formula made with Gotu Kola, Ginkgo, Guarana, Ashwagandha and other herbs.</p>
+        <ul class="sc-specs">
+          <li><b>Supports:</b> Exercise &amp; Endurance</li>
+          <li><b>Body System:</b> Endocrine</li>
+          <li><b>Action:</b> Activating</li>
+        </ul>
+        <div class="sc-price">
+          <span class="sc-retail">Retail: <s>$34.95</s></span>
+          <span class="off-pill">20% OFF</span>
+          <span class="sc-now">Now:<b>$27.96</b></span>
+        </div>
+        <div class="sc-actions">
+          <div class="stepper">
+            <button type="button" class="step-minus" aria-label="Decrease Energy &amp; Stamina quantity">−</button>
+            <input type="number" class="step-input" value="1" min="1" max="12" aria-label="Energy &amp; Stamina quantity">
+            <button type="button" class="step-plus" aria-label="Increase Energy &amp; Stamina quantity">+</button>
+          </div>
+          <button type="button" class="btn add-btn">
+            <svg viewBox="0 0 28 24" aria-hidden="true"><path d="M1.5 2h4l3 13.5h14l3-9.5H7.2" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="10.5" cy="20.5" r="1.9" fill="currentColor"/><circle cx="20.5" cy="20.5" r="1.9" fill="currentColor"/></svg>
+            Add to Cart
+          </button>
+        </div>
+        <button type="button" class="details-btn" aria-expanded="false" aria-controls="details-energy">Product Details <span class="tri" aria-hidden="true"></span></button>
+      </div>
+    </article>
+    <section class="details-panel tint-energy" id="details-energy" data-col="1" aria-label="About Energy &amp; Stamina" hidden>
+      <div class="dp-media"><img src="images/bottle-energy.png" alt="" width="98" height="246"></div>
+      <div class="dp-body">
+        <h3>About Energy &amp; Stamina</h3>
+        <p class="dp-lead">Alcohol-free herbal liquid formula made with Gotu Kola, Ginkgo, Guarana, Ashwagandha, and other herbs.</p>
+        <ul class="dp-specs">
+          <li><b>Supports:</b> Exercise &amp; Endurance</li>
+          <li><b>Body System:</b> Endocrine</li>
+          <li><b>Action:</b> Activating</li>
+          <li><b>Size:</b> 2 Fl Oz</li>
+        </ul>
+        <h4>Ingredients</h4>
+        <p>Gotu Kola Herb; Ginkgo Leaf; Guarana Seed; Ashwagandha Root; Yerba Maté Leaf; Hawthorn Leaf; Green Tea Leaf; Eleuthero Root; Bupleurum Root; Tongkat Ali Root.</p>
+        <h4 class="h4-sm">Other Ingredients</h4>
+        <p>USP Grade Vegetable Glycerin, Purified Water.</p>
+        <h4>Suggested Use</h4>
+        <p>1.23 mL, 1 to 3 times daily, as needed. Shake well.</p>
+        <h4 class="h4-sm">Note</h4>
+        <p>Do not use while pregnant. Consult your healthcare provider if you are taking medication or have a medical condition.</p>
+      </div>
+    </section>
+
+    <!-- Adrenal Balance -->
+    <article class="shop-card tint-adrenal" id="adrenal" data-product="adrenal" data-col="2">
+      <div class="sc-media"><img src="images/bottle-adrenal.png" alt="Adrenal Balance herbal formula, 2 fl oz bottle" width="102" height="266"></div>
+      <div class="sc-body">
+        <h2 class="sc-title">Adrenal Balance</h2>
+        <p class="sc-short">Support for everyday balance and resilience.*</p>
+        <p class="sc-long">Alcohol-free herbal liquid formula for the endocrine system.</p>
+        <ul class="sc-specs">
+          <li><b>Supports:</b> Stress</li>
+          <li><b>Body System:</b> Endocrine/Adrenal</li>
+          <li><b>Action:</b> Building</li>
+        </ul>
+        <div class="sc-price">
+          <span class="sc-retail">Retail: <s>$32.95</s></span>
+          <span class="off-pill">20% OFF</span>
+          <span class="sc-now">Now:<b>$26.36</b></span>
+        </div>
+        <div class="sc-actions">
+          <div class="stepper">
+            <button type="button" class="step-minus" aria-label="Decrease Adrenal Balance quantity">−</button>
+            <input type="number" class="step-input" value="1" min="1" max="12" aria-label="Adrenal Balance quantity">
+            <button type="button" class="step-plus" aria-label="Increase Adrenal Balance quantity">+</button>
+          </div>
+          <button type="button" class="btn add-btn">
+            <svg viewBox="0 0 28 24" aria-hidden="true"><path d="M1.5 2h4l3 13.5h14l3-9.5H7.2" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="10.5" cy="20.5" r="1.9" fill="currentColor"/><circle cx="20.5" cy="20.5" r="1.9" fill="currentColor"/></svg>
+            Add to Cart
+          </button>
+        </div>
+        <button type="button" class="details-btn" aria-expanded="false" aria-controls="details-adrenal">Product Details <span class="tri" aria-hidden="true"></span></button>
+      </div>
+    </article>
+    <section class="details-panel tint-adrenal" id="details-adrenal" data-col="2" aria-label="About Adrenal Balance" hidden>
+      <div class="dp-media"><img src="images/bottle-adrenal.png" alt="" width="102" height="266"></div>
+      <div class="dp-body">
+        <h3>About Adrenal Balance</h3>
+        <p class="dp-lead">Alcohol-free herbal liquid formula for the endocrine system.</p>
+        <ul class="dp-specs">
+          <li><b>Supports:</b> Stress</li>
+          <li><b>Body System:</b> Endocrine and Adrenal</li>
+          <li><b>Action:</b> Building</li>
+          <li><b>Size:</b> 2 Fl Oz</li>
+        </ul>
+        <h4>Ingredients</h4>
+        <p>Astragalus Root; Wood Betony Herb; Ginkgo Leaf; Eleuthero Root; Gotu Kola Herb; Rhodiola Root; Licorice Root; Lavender Flower; Spearmint Leaf; Passionflower Leaf.</p>
+        <h4 class="h4-sm">Other Ingredients</h4>
+        <p>USP Grade Vegetable Glycerin, Purified Water.</p>
+        <h4>Suggested Use</h4>
+        <p>¼ tsp (1.23 mL) 1 to 3 times a day, or as needed. Shake well.</p>
+        <h4 class="h4-sm">Note</h4>
+        <p>Consult your healthcare provider before use if you are pregnant, nursing, taking medication, or have a medical condition.</p>
+      </div>
+    </section>
+
+    <!-- Joint & Muscle -->
+    <article class="shop-card tint-joint" id="joint" data-product="joint" data-col="3">
+      <div class="sc-media"><img src="images/bottle-joint.png" alt="Joint &amp; Muscle herbal formula, 2 fl oz bottle" width="98" height="240"></div>
+      <div class="sc-body">
+        <h2 class="sc-title">Joint &amp; Muscle</h2>
+        <p class="sc-short">Support for movement and an active lifestyle.*</p>
+        <p class="sc-long">Builds Healthy Joint &amp; Muscle Tissues.</p>
+        <ul class="sc-specs">
+          <li><b>Body System:</b> Structural</li>
+        </ul>
+        <div class="sc-price">
+          <span class="sc-retail">Retail: <s>$34.95</s></span>
+          <span class="off-pill">20% OFF</span>
+          <span class="sc-now">Now:<b>$27.96</b></span>
+        </div>
+        <div class="sc-actions">
+          <div class="stepper">
+            <button type="button" class="step-minus" aria-label="Decrease Joint &amp; Muscle quantity">−</button>
+            <input type="number" class="step-input" value="1" min="1" max="12" aria-label="Joint &amp; Muscle quantity">
+            <button type="button" class="step-plus" aria-label="Increase Joint &amp; Muscle quantity">+</button>
+          </div>
+          <button type="button" class="btn add-btn">
+            <svg viewBox="0 0 28 24" aria-hidden="true"><path d="M1.5 2h4l3 13.5h14l3-9.5H7.2" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="10.5" cy="20.5" r="1.9" fill="currentColor"/><circle cx="20.5" cy="20.5" r="1.9" fill="currentColor"/></svg>
+            Add to Cart
+          </button>
+        </div>
+        <button type="button" class="details-btn" aria-expanded="false" aria-controls="details-joint">Product Details <span class="tri" aria-hidden="true"></span></button>
+      </div>
+    </article>
+    <section class="details-panel tint-joint" id="details-joint" data-col="3" aria-label="About Joint &amp; Muscle" hidden>
+      <div class="dp-media"><img src="images/bottle-joint.png" alt="" width="98" height="240"></div>
+      <div class="dp-body">
+        <h3>About Joint &amp; Muscle</h3>
+        <p class="dp-lead">Builds Healthy Joint &amp; Muscle Tissues.</p>
+        <ul class="dp-specs">
+          <li><b>Supports:</b> Joint &amp; muscle tissue health</li>
+          <li><b>Body System:</b> Structural</li>
+          <li><b>Size:</b> 2 oz</li>
+        </ul>
+        <h4>Ingredients</h4>
+        <p>Alfalfa Leaf; Stinging Nettle Leaf; Cat’s Claw Bark; Devil’s Claw Root; Turmeric Root; Horsetail Herb; Cornsilk; Fenugreek Seed; Cinnamon Cassia Bark; Yucca Root; Black Walnut Hull.</p>
+        <h4 class="h4-sm">Other Ingredients</h4>
+        <p>USP Grade Vegetable Glycerin, Purified Water.</p>
+        <h4>Suggested Use</h4>
+        <p>¼ tsp (1.23 mL) 2–3 times a day, or as needed. For best results, take 2–3 times daily for 2–3 weeks at a time. Shake well.</p>
+      </div>
+    </section>
+
+    <p class="no-results" id="no-results" hidden>No formulas match your search.</p>
+  </div>
+
+  <!-- ============ BUNDLE OFFER ============ -->
+  <section class="bundle container" id="bundle" aria-labelledby="bundle-title">
+    <div class="bundle-box">
+      <div class="bundle-trio"><img src="images/bottles-trio.png" alt="Energy &amp; Stamina, Adrenal Balance and Joint &amp; Muscle bottles" width="216" height="158"></div>
+      <h2 class="bundle-copy" id="bundle-title">
+        <span class="b1">Buy any 3 bottles<span class="b1-and"> and</span></span>
+        <span class="b2">Save an extra 5% + free shipping.</span>
+      </h2>
+      <dl class="bundle-table">
+        <div><dt>3 Bottles (Sale Price)</dt><dd>$82.28</dd></div>
+        <div class="hl"><dt><span class="lbl-desk">Extra 5% Savings</span><span class="lbl-mob">Extra 5% Bundle Savings</span></dt><dd>−$4.11</dd></div>
+        <div><dt>Shipping</dt><dd>FREE</dd></div>
+        <div class="total"><dt>Total</dt><dd>$78.17</dd></div>
+      </dl>
+      <p class="bundle-note">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l12 6v14l-12 6-12-6V9z" fill="#fde7a6" stroke="#e8a317" stroke-width="1.8" stroke-linejoin="round"/><path d="M4 9l12 6 12-6M16 15v14M10 6l12 6" fill="none" stroke="#e8a317" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <span>Any combination of 3 bottles qualifies for the <span class="lbl-mob">extra </span>5% savings and free shipping.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ YOUR SELECTION ============ -->
+  <div class="selection-wrap" id="selection">
+    <div class="container">
+      <div class="selection-bar">
+        <svg class="sel-icon" viewBox="0 0 28 24" aria-hidden="true"><path d="M1.5 2h4l3 13.5h14l3-9.5H7.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="10.5" cy="20.5" r="1.8" fill="currentColor"/><circle cx="20.5" cy="20.5" r="1.8" fill="currentColor"/></svg>
+        <div class="sel-text">
+          <strong class="sel-title">Your Selection</strong>
+          <span class="sel-summary" aria-live="polite"><span id="sel-count">0 Bottles</span><span class="sep">|</span>Subtotal: <span id="sel-subtotal">$0.00</span></span>
+          <span class="sel-hint" id="sel-hint">Add any 3 bottles to save an extra 5% + free shipping.</span>
+        </div>
+        <button type="button" class="btn btn-yellow sel-btn" id="add-selected">
+          <span class="lbl-desk">Add Selected to Cart</span><span class="lbl-mob">Add Selected Bottles to Cart</span> <span class="arrow">›</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Cedar Bear Naturales®</span>
+    <small>*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</small>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="collection.js"></script>
+</body>
+</html>

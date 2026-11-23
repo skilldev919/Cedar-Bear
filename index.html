@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cedar Bear Naturales – Stay in Motion</title>
+<meta name="description" content="Support your active lifestyle with botanical formulas from Cedar Bear Naturales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="logo" aria-label="Cedar Bear Naturales home">
+      <svg class="logo-leaf" viewBox="0 0 40 28" aria-hidden="true">
+        <path d="M3 25 C 8 8, 22 2, 37 3 C 36 16, 26 25, 10 23 Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M3 25 C 12 18, 20 13, 30 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+      <span>Cedar Bear Naturales<sup>®</sup></span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Main">
+      <ul>
+        <li class="has-dropdown">
+          <button class="nav-link" aria-expanded="false">Shop <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <ul class="dropdown">
+            <li><a href="#products">All Products</a></li>
+            <li><a href="#product-energy" data-product="energy">Energy &amp; Stamina</a></li>
+            <li><a href="#product-adrenal" data-product="adrenal">Adrenal Balance</a></li>
+            <li><a href="#product-joint" data-product="joint">Joint &amp; Muscle</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <button class="nav-link" aria-expanded="false">Collections <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <ul class="dropdown">
+            <li><a href="collection.html">Stay in Motion</a></li>
+            <li><a href="#products">Active-Day Favorites</a></li>
+            <li><a href="#products">Herbal Formulas</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link" href="#about">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <!-- Desktop / tablet: full designed banner -->
+    <div class="hero-banner">
+      <img src="3.png" alt="Smiling couple hiking in the mountains" width="1010" height="242">
+      <div class="sr-only">
+        <p>Stay in Motion</p>
+        <h1 id="hero-title">Keep doing what you love.</h1>
+        <p>Support your active lifestyle with botanical formulas from Cedar Bear Naturales.</p>
+      </div>
+      <a href="#products" class="hero-hotspot" aria-label="Find Your Active-Day Favorite"></a>
+    </div>
+
+    <!-- Mobile: photo with live text laid over it -->
+    <div class="hero-mobile">
+      <img class="hm-photo" src="1.png" alt="" width="377" height="241">
+      <div class="hm-copy">
+        <span class="brush-tag">STAY IN MOTION</span>
+        <p class="hm-title" aria-hidden="true">Keep doing what you <span class="underline">love.</span></p>
+        <p class="hm-sub">Support your active lifestyle with botanical formulas from Cedar Bear Naturales.</p>
+      </div>
+      <a href="#products" class="btn btn-yellow hm-cta">Find Your Active-Day Favorite <span class="arrow">›</span></a>
+    </div>
+    <div class="hero-wave" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============ PRODUCTS ============ -->
+  <section id="products" class="products" aria-labelledby="products-title">
+    <div class="container">
+      <div class="section-heading">
+        <span class="rule" aria-hidden="true"></span>
+        <h2 id="products-title">Find Your Active-Day Favorite</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+      <p class="section-sub">Three formulas to fit your routine.</p>
+
+      <div class="product-grid">
+        <!-- Energy & Stamina -->
+        <article id="product-energy" class="product-card tint-green" data-product="energy">
+          <div class="product-media">
+            <div class="bottle">
+              <img src="2.png" alt="Energy &amp; Stamina herbal formula bottle" width="84" height="204">
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Energy &amp; <br>Stamina</h3>
+            <p class="desc">Support for your active-day routine.</p>
+            <div class="price-row">
+              <span class="retail">Retail: <s>$34.95</s></span>
+              <span class="badge">20% OFF</span>
+            </div>
+            <div class="now">Now: <strong>$27.96</strong></div>
+            <button class="btn btn-dark view-product" data-product="energy">View Product <span class="arrow">›</span></button>
+          </div>
+        </article>
+
+        <!-- Adrenal Balance -->
+        <article id="product-adrenal" class="product-card tint-lavender" data-product="adrenal">
+          <div class="product-media">
+            <div class="bottle">
+              <img src="4.png" alt="Adrenal Balance herbal formula bottle" width="106" height="195">
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Adrenal <br>Balance</h3>
+            <p class="desc">Support for everyday balance and resilience.</p>
+            <div class="price-row">
+              <span class="retail">Retail: <s>$32.95</s></span>
+              <span class="badge">20% OFF</span>
+            </div>
+            <div class="now">Now: <strong>$26.36</strong></div>
+            <button class="btn btn-dark view-product" data-product="adrenal">View Product <span class="arrow">›</span></button>
+          </div>
+        </article>
+
+        <!-- Joint & Muscle -->
+        <article id="product-joint" class="product-card tint-peach" data-product="joint">
+          <div class="product-media">
+            <div class="bottle">
+              <img src="5.png" alt="Joint &amp; Muscle herbal formula bottle" width="93" height="215">
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Joint &amp; <br>Muscle</h3>
+            <p class="desc">Support for movement and an active lifestyle.</p>
+            <div class="price-row">
+              <span class="retail">Retail: <s>$34.95</s></span>
+              <span class="badge">20% OFF</span>
+            </div>
+            <div class="now">Now: <strong>$27.96</strong></div>
+            <button class="btn btn-dark view-product" data-product="joint">View Product <span class="arrow">›</span></button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COLLECTION BANNER ============ -->
+  <section id="collection" class="collection" aria-labelledby="collection-title">
+    <div class="container">
+      <div class="collection-banner">
+        <svg class="collection-art" viewBox="0 0 1000 160" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 110 C 150 70, 260 120, 420 95 C 560 72, 700 120, 840 90 C 920 74, 970 88, 1000 84 L1000 160 L0 160Z" fill="#2f7a3c" opacity=".55"/>
+          <path d="M0 130 C 180 100, 330 140, 520 118 C 700 98, 850 140, 1000 118 L1000 160 L0 160Z" fill="#245f30" opacity=".8"/>
+        </svg>
+        <svg class="trees trees-left" viewBox="0 0 220 160" aria-hidden="true">
+          <g fill="#173f22">
+            <path d="M40 10 L62 60 L52 60 L72 100 L60 100 L82 150 L-2 150 L20 100 L8 100 L28 60 L18 60Z"/>
+            <path d="M110 40 L126 76 L118 76 L134 106 L124 106 L140 150 L80 150 L96 106 L86 106 L102 76 L94 76Z" opacity=".85"/>
+            <path d="M165 70 L176 96 L170 96 L182 120 L174 120 L186 150 L144 150 L156 120 L148 120 L160 96 L154 96Z" opacity=".7"/>
+          </g>
+        </svg>
+        <svg class="trees trees-right" viewBox="0 0 220 160" aria-hidden="true">
+          <g fill="#173f22">
+            <path d="M180 10 L202 60 L192 60 L212 100 L200 100 L222 150 L138 150 L160 100 L148 100 L168 60 L158 60Z"/>
+            <path d="M110 40 L126 76 L118 76 L134 106 L124 106 L140 150 L80 150 L96 106 L86 106 L102 76 L94 76Z" opacity=".85"/>
+            <path d="M55 70 L66 96 L60 96 L72 120 L64 120 L76 150 L34 150 L46 120 L38 120 L50 96 L44 96Z" opacity=".7"/>
+          </g>
+        </svg>
+        <div class="collection-content">
+          <h2 id="collection-title">Explore the Stay in Motion Collection</h2>
+          <a href="collection.html" class="btn btn-yellow btn-lg" id="view-collection">View Collection <span class="arrow">›</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="about">
+    <div class="container about-inner">
+      <h2>About Cedar Bear Naturales</h2>
+      <p>We craft alcohol-free botanical formulas from carefully selected herbs, made to fit naturally into an active, outdoor life. Every bottle is made in small batches with the same care we'd want for our own families.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Cedar Bear Naturales®</span>
+    <small>These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</small>
+  </div>
+</footer>
+
+<!-- ============ PRODUCT MODAL ============ -->
+<div class="modal" id="product-modal" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" data-close aria-label="Close">×</button>
+    <div class="modal-media" id="modal-media"></div>
+    <div class="modal-body">
+      <span class="modal-tag" id="modal-tag"></span>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <ul class="modal-points" id="modal-points"></ul>
+      <div class="price-row">
+        <span class="retail">Retail: <s id="modal-retail"></s></span>
+        <span class="badge">20% OFF</span>
+      </div>
+      <div class="now">Now: <strong id="modal-price"></strong></div>
+      <div class="qty-row">
+        <div class="qty">
+          <button type="button" id="qty-minus" aria-label="Decrease quantity">−</button>
+          <input type="number" id="qty" value="1" min="1" max="10" aria-label="Quantity">
+          <button type="button" id="qty-plus" aria-label="Increase quantity">+</button>
+        </div>
+        <button class="btn btn-yellow" id="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
